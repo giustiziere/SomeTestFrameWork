@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.9.6'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.projectlombok:lombok:1.18.24'
+    implementation 'com.codeborne:selenide:6.5.0'
+    implementation 'org.testng:testng:7.6.0'
+    implementation 'com.thegoate:restassured:0.15.8.202204130045'
+    implementation 'io.qameta.allure:allure-java-commons:2.17.3'
+    implementation 'io.qameta.allure:allure-testng:2.18.1'
+    implementation 'org.slf4j:slf4j-api:1.7.36'
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
+    testImplementation 'org.testng:testng:7.6.0'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+}
+
+test {
+    useTestNG()
+}
